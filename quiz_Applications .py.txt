@@ -1,0 +1,42 @@
+
+questions = [
+    {
+        "question": "1. What is Python?",
+        "options": ["A. Browser", "B. Programming language",
+                    "C. Database", "D. Operating system"],
+        "answer": "B"
+    },
+    {
+        "question": "2. Which keyword defines a function?",
+        "options": ["A. loop", "B. function",
+                    "C. def", "D. create"],
+        "answer": "C"
+    },
+    {
+        "question": "3. Which data type stores True or False?",
+        "options": ["A. int", "B. bool",
+                    "C. str", "D. list"],
+        "answer": "B"
+    }
+]
+
+score = 0
+
+print("PYTHON QUIZ APPLICATION\n")
+
+for item in questions:
+    print(item["question"])
+
+    for option in item["options"]:
+        print(option)
+
+    answer = input("Enter your answer: ").upper()
+
+    if answer == item["answer"]:
+        print("Correct!\n")
+        score += 1
+    else:
+        print("Incorrect!\n")
+
+print("Final Score:", score, "/", len(questions))
+print("Percentage:", round(score / len(questions) * 100, 2), "%")
